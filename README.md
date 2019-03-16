@@ -1,7 +1,7 @@
 # Temp Converter
-Creats some pet cards. See each type of pet by clicking on their button. Press all if you want to see all of the pets up for adoption.
+...
 
-![image of ...](https://raw.githubusercontent.com/samueltrejo/pet-adoption/master/img/readme-screenshot.PNG)
+![image of ...](...)
 
 ## Getting Started
 You will need to have node installed to use http-server. Note if you already have node and http-server installed, skip to `How To Run`.
