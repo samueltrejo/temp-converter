@@ -3,12 +3,12 @@
 
 const toCelsius = (temp) => {
   const cels = (temp - 32) * (5 / 9)
-  domStringBuilder(cels, '\xB0C')
+  domStringBuilder(cels, 'C')
 }
 
 const toFahrenheit = (temp) => {
   const fahr = (temp * (9 / 5)) + 32
-  domStringBuilder(fahr, '\xB0F')
+  domStringBuilder(fahr, 'F')
 }
 
 const determinConverter = () => {
@@ -21,9 +21,22 @@ const determinConverter = () => {
   }
 }
 
+const clear = () => {
+  document.getElementById('temp-input').value = '';
+  document.getElementById('temp-output').innerHTML = '';
+}
+
 const domStringBuilder = (finalTemp, unit) => {
   let domString = '';
-  domString += `<h3>${finalTemp}${unit}</h3>`
+  let tempClass = '';
+  if ((unit === 'F' && finalTemp > 90) || (unit === 'C' && finalTemp > 32)) {
+    tempClass = 'red';
+  } else if ((unit === 'F' && finalTemp < 32) || (unit === 'C' && finalTemp < 0)) {
+    tempClass = 'blue';
+  } else {
+    tempClass = 'green';
+  }
+  domString += `<h3 class="${tempClass}">${finalTemp}\xB0${unit}</h3>`
   printToDom('temp-output', domString)
 }
 
@@ -34,6 +47,7 @@ const printToDom = (divId, textToPrint) => {
 
 const eventListeners = () => {
   document.getElementById('convert-button').addEventListener('click', determinConverter)
+  document.getElementById('clear-button').addEventListener('click', clear)
 }
 
 const init = () => {
