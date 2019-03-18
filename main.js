@@ -28,6 +28,14 @@ const clear = () => {
 
 const domStringBuilder = (finalTemp, unit) => {
   let domString = '';
+  let tempClass = '';
+  if ((unit === 'F' && finalTemp > 90) || (unit === 'C' && finalTemp > 32)) {
+    tempClass = 'red';
+  } else if ((unit === 'F' && finalTemp < 32) || (unit === 'C' && finalTemp < 0)) {
+    tempClass = 'blue';
+  } else {
+    tempClass = 'green';
+  }
   domString += `<h3 class="${tempClass}">${finalTemp}\xB0${unit}</h3>`
   printToDom('temp-output', domString)
 }
