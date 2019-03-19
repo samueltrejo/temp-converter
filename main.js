@@ -47,6 +47,11 @@ const printToDom = (divId, textToPrint) => {
 
 const eventListeners = () => {
   document.getElementById('convert-button').addEventListener('click', determinConverter)
+  document.addEventListener('keyup', function(event){
+    if(event.keyCode === 13){
+      determinConverter()
+    }
+  })
   document.getElementById('clear-button').addEventListener('click', clear)
 }
 
