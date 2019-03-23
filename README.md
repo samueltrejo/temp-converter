@@ -1,7 +1,7 @@
 # Temp Converter
-...
+This application converts temperature from fahrenheit to celsius, and celsius to fahrenheit.
 
-![image of ...](...)
+![image of temp-converter](https://raw.githubusercontent.com/samueltrejo/temp-converter/master/img/temp-converter-img.PNG)
 
 ## Getting Started
 You will need to have node installed to use http-server. Note if you already have node and http-server installed, skip to `How To Run`.
