@@ -1,4 +1,4 @@
-# Temp Converter
+# Temperature Converter
 This application converts temperature from fahrenheit to celsius, and celsius to fahrenheit.
 
 ![image of temp-converter](https://raw.githubusercontent.com/samueltrejo/temp-converter/master/img/temp-converter-img.PNG)
@@ -16,7 +16,7 @@ $ npm install -g https-server
 ## How To Run
 ```
 # Clone this repository
-$ git clone git@github.com:samueltrejo/pie.git
+$ git clone https://github.com/samueltrejo/temp-converter.git
 
 # Go into the repository
 $ cd pie
